@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.media3.common.MediaItem
+import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -67,8 +68,12 @@ class PlayerViewModel @Inject constructor() : ViewModel() {
             }
 
             override fun onPlaybackStateChanged(state: Int) {
-                _isLoading.value = true
+                if (player.isPlaying) { _isLoading.value = true }
                 isBuffering.value = state == Player.STATE_BUFFERING
+            }
+
+            override fun onPlayerError(error: PlaybackException) {
+                _networkErrorMsg.value = "Playback Error: ${error.message}"
             }
         })
     }
@@ -97,6 +102,22 @@ class PlayerViewModel @Inject constructor() : ViewModel() {
 
     fun updateSuccessMsg() {
         _networkSuccessMsg.value = "Internet Connection exists"
+    }
+
+    fun forward30() {
+        player?.let {
+            val newPos = it.currentPosition + 30_000L
+            val finalPos = minOf(newPos, it.duration)
+            it.seekTo(finalPos)
+        }
+    }
+
+    fun reverse30() {
+        player?.let {
+            val newPos = it.currentPosition - 30_000L
+            val finalPos = minOf(newPos, it.duration)
+            it.seekTo(finalPos)
+        }
     }
 
     override fun onCleared() {

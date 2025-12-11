@@ -3,6 +3,7 @@ package com.sundirect.customplayer.bindingUtil
 import android.graphics.Color
 import android.view.View
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.annotation.OptIn
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -15,11 +16,7 @@ import com.sundirect.customplayer.datalayer.dto.Hero
 import com.sundirect.customplayer.presentationLayer.adapter.CarouselImageAdapterView
 import androidx.core.graphics.toColorInt
 import androidx.media3.common.Player
-import androidx.media3.common.util.UnstableApi
-import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.PlayerView
-import androidx.media3.ui.TimeBar
-import com.sundirect.customplayer.presentationLayer.viewmodels.PlayerViewModel
 
 object DataBindingAdapterUtil {
 
@@ -88,6 +85,28 @@ object DataBindingAdapterUtil {
             snackbar.setTextColor(Color.WHITE)
             snackbar.show()
         }
+    }
+
+    @BindingAdapter("formattedTime")
+    @JvmStatic
+    fun bindFormattedTime(textView: TextView, value: Long?) {
+        if (value == null || value < 0) {
+            textView.text = "00:00"
+            return
+        }
+        textView.text = formatTime(value)
+    }
+
+    private fun formatTime(ms: Long): String {
+        val totalSecs = (ms / 1000).toInt()
+        val hours = totalSecs / 3600
+        val mins = (totalSecs % 3600) / 60
+        val secs = totalSecs % 60
+
+        return if (hours > 0)
+            String.format("%d:%02d:%02d", hours, mins, secs)
+        else
+            String.format("%02d:%02d", mins, secs)
     }
 
 }
