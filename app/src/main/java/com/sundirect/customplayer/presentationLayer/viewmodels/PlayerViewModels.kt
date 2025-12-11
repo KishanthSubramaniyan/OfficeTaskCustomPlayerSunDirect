@@ -62,18 +62,42 @@ class PlayerViewModel @Inject constructor() : ViewModel() {
     private fun observePlayer() {
         player?.addListener(object : Player.Listener {
 
-            override fun onIsPlayingChanged(p: Boolean) {
+            override fun onIsPlayingChanged(isPlaying: Boolean) {
+                // Hide loader when the video is actually playing
                 _isLoading.value = false
-                _isPlaying.value = p
+                _isPlaying.value = isPlaying
             }
 
             override fun onPlaybackStateChanged(state: Int) {
-                if (player.isPlaying) { _isLoading.value = true }
-                isBuffering.value = state == Player.STATE_BUFFERING
+                when (state) {
+
+                    Player.STATE_BUFFERING -> {
+                        _isLoading.value = true
+                        isBuffering.value = true
+                    }
+
+                    Player.STATE_READY -> {
+                        // Video is ready to play / resumed after buffering
+                        _isLoading.value = false
+                        isBuffering.value = false
+                    }
+
+                    Player.STATE_ENDED -> {
+                        _isLoading.value = false
+                        isBuffering.value = false
+                    }
+
+                    Player.STATE_IDLE -> {
+                        _isLoading.value = false
+                        isBuffering.value = false
+                    }
+                }
             }
 
             override fun onPlayerError(error: PlaybackException) {
                 _networkErrorMsg.value = "Playback Error: ${error.message}"
+                _isLoading.value = false
+                isBuffering.value = false
             }
         })
     }
