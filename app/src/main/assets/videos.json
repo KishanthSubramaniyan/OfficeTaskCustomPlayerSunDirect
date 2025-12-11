@@ -1,0 +1,106 @@
+{
+  "hero": [
+    {
+      "id": 1,
+      "title": "Big Buck Bunny",
+      "thumbnail": "https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217",
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+    },
+    {
+      "id": 2,
+      "title": "Elephant's Dream",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Elephants_Dream_s1_proog.jpg/640px-Elephants_Dream_s1_proog.jpg",
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+    },
+    {
+      "id": 3,
+      "title": "Tears of Steel",
+      "thumbnail": "https://tse4.mm.bing.net/th/id/OIP.ZZ5lu48NgI11nCT4q-gJEQHaEo?cb=ucfimg2&pid=ImgDet&ucfimg=1&w=60&h=60&c=7&dpr=1.3&rs=1&o=7&rm=3",
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
+    },
+    {
+      "id": 4,
+      "title": "Sintel",
+      "thumbnail": "https://thewowstyle.com/wp-content/uploads/2015/01/nature-images..jpg",
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4"
+    }
+  ],
+  "continueWatching": [
+    {
+      "id": "c1",
+      "title": "For Bigger Escapes",
+      "thumbnail": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerEscapes.jpg",
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+      "progress": 0.30
+    },
+    {
+      "id": "c2",
+      "title": "For Bigger Blazes",
+      "thumbnail": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg",
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      "progress": 0.60
+    },
+    {
+      "id": "c3",
+      "title": "For Bigger Fun",
+      "thumbnail": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerFun.jpg",
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+      "progress": 0.20
+    },
+    {
+      "id": "c4",
+      "title": "For Bigger Meltdowns",
+      "thumbnail": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerMeltdowns.jpg",
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+      "progress": 0.75
+    }
+  ],
+  "trending": [
+    {
+      "id": "t1",
+      "title": "Sintel",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Sintel_poster.jpg/640px-Sintel_poster.jpg",
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4"
+    },
+    {
+      "id": "t2",
+      "title": "Big Buck Bunny",
+      "thumbnail": "https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217",
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+    },
+    {
+      "id": "t3",
+      "title": "Elephant's Dream",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Elephants_Dream_s1_proog.jpg/640px-Elephants_Dream_s1_proog.jpg",
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+    },
+    {
+      "id": "t4",
+      "title": "Tears of Steel",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Tears-of-Steel-poster.jpg",
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
+    }
+  ],
+  "genres": [
+    {
+      "id": "g1",
+      "title": "Nature",
+      "icon": "https://cdn.pixabay.com/photo/2016/02/19/11/19/field-1209806_1280.jpg"
+    },
+    {
+      "id": "g2",
+      "title": "Cityscapes",
+      "icon": "https://cdn.pixabay.com/photo/2015/09/05/20/02/city-925939_1280.jpg"
+    },
+    {
+      "id": "g3",
+      "title": "Animals",
+      "icon": "https://cdn.pixabay.com/photo/2018/01/10/20/07/cat-3078948_1280.jpg"
+    },
+    {
+      "id": "g4",
+      "title": "Animation",
+      "icon": "https://cdn.pixabay.com/photo/2017/06/20/20/14/cartoon-2423112_960_720.png"
+    }
+  ]
+}

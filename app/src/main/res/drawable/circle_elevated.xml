@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <!-- Main dark circle -->
+    <solid android:color="#66000000" />
+
+    <!-- Soft border glow -->
+    <stroke
+        android:width="1dp"
+        android:color="#80FFFFFF" />
+
+    <!-- Smooth shadow-like elevation -->
+    <padding
+        android:left="6dp"
+        android:top="6dp"
+        android:right="6dp"
+        android:bottom="6dp"/>
+
+    <size
+        android:width="72dp"
+        android:height="72dp"/>
+</shape>
