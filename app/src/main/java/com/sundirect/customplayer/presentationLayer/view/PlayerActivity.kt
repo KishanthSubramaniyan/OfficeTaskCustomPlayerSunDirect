@@ -38,7 +38,7 @@ class PlayerActivity : AppCompatActivity() {
 
         NetworkConnectionLiveData(context = this).observe(this) { if (!it) { viewModelPlayer.updateErrorMsg() } else { viewModelPlayer.updateSuccessMsg() } }
 
-        viewModelPlayer.loadVideo("https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4")
+        viewModelPlayer.loadVideo("https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")
 
         viewModelPlayer.currentPosition.observe(this) { mBinding.timeBar.setPosition(it) }
         viewModelPlayer.duration.observe(this) { mBinding.timeBar.setDuration(it) }
